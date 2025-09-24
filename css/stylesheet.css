@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    margin: 20px;
+}
+
+.presentation p {
+    color: hsl(212, 6%, 44%);
+    font-weight: 200px;
+    font-size: 14px;
+}
+
+.presentation h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.presentation h1 span:nth-child(1) {
+    color: hsl(212, 6%, 44%);
+    font-weight: normal;
+}
+
+.presentation h1 span:nth-child(2) {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600px;
+}
+
+.all-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    width: 250px;
+    height: auto;
+    padding-top: 25px;
+    padding: 30px;
+    padding-bottom: 40px;
+    box-shadow: 0px 2px 10px black;
+    border-radius: 2px;
+    justify-content: center;
+}
+
+.card#supervisor-card {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card#builder-card {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card#karma-card {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card#calculator-card {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.card h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 5px;
+    margin-left: 0px;
+    font-weight: 200;
+    font-size: 14px;
+    padding-bottom: 25px;
+}
+
+.card img {
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+}
+
+@media (min-width:1024px) {
+    .presentation {
+        width: 460px;
+    }
+
+    .all-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        column-gap: 30px;
+        row-gap: 0px;
+        justify-content: center;
+        transform: translateY(-50px);
+
+    }
+
+    .card#supervisor-card {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .card#builder-card {
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(80px);
+    }
+
+    .card#karma-card {
+        grid-column: 2;
+        grid-row: 3;
+        transform: translateY(-80px);
+    }
+
+    .card#calculator-card {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
